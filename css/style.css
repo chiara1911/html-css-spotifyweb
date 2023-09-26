@@ -39,6 +39,7 @@ li{
 main{
     width: 100%;
     height: calc(100vh - 100px);
+    overflow-y: auto;
     
 }
 /* sidebar */
@@ -53,11 +54,18 @@ main{
     background-color: red;
     width: calc(100% - 250px);
     height: 100%;
+    margin-top: 50px
 }
 #fixed-button{
     display: flex;
     justify-content: flex-end;    
-    background-color: rgba(8, 11, 18, 0.5) ;    
+    background-color: rgba(8, 11, 18, 0.5) ;  
+    position: fixed;  
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    width: calc(100% - 250px);
+    height: 50px;
 }
 #upgrade{
     border: solid 2px white;
