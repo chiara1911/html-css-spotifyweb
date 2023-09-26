@@ -14,9 +14,9 @@
 	--color-highlight: #ADFF2F;
 }
 
-.debug{
+/* .debug{
     border: solid 1px black;
-}
+} */
 .d-flex{
     display: flex;
 }
@@ -35,26 +35,49 @@ li{
   list-style-type: none;
   padding: 5px;
 }
+
+h4{
+    color: var(--color-white);
+    font-size: 0.8em;
+}
+
+p{
+    color: var(--color-light-grey);
+    font-size: 0.6em;
+}
+
+img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.circle{
+    border-radius: 50%;
+}
 /* main */
 main{
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 50px);
     overflow-y: auto;
+    background-color: var(--color-dark-color);
+    color: var(--color-white);
     
 }
 /* sidebar */
 .side-bar{
-    background-color: orange;
+    background-color: var(--color-black);
     width: 250px;
     height: 100%;
+    color: var(--color-white);
 }
 
 /* main-content */
 .main-content{
-    background-color: red;
+    /* background-color: red; */
     width: calc(100% - 250px);
-    height: 100%;
-    margin-top: 50px
+    height: calc(100% - 100px);
+    margin-top: 50px;
+    padding: 20px;
 }
 #fixed-button{
     display: flex;
@@ -66,15 +89,16 @@ main{
     right: 0;
     width: calc(100% - 250px);
     height: 50px;
+    margin-right: 20px;
 }
 #upgrade{
     border: solid 2px white;
     display: inline-block;
     border-radius: 30px;   
     padding: 10px 30px;
-    color: white;
+    color:var(--color-white);
     text-decoration: none;
-    margin: 10px;
+    margin: 4px;
 }
 
 .choose{
@@ -82,9 +106,9 @@ main{
 }
 
 .card{
-    width: calc((100% / 5) - 30px);
+    width: calc(100% / 6) ;
     height: 200px;
-    background-color: pink; 
+    background-color:var(--color-dark-color); 
     margin-top: 20px; 
     
 }
@@ -95,20 +119,23 @@ main{
 
 .card-img{
     height: 150px;
-    width: 150px;
-    margin: 2px 30px; 
-    padding: 20px; 
+    width: 150px;  
 
 }
 
-img{
-    width: 100%;
-    object-fit: contain;
+
+.card-section{
+    margin: 20px;
+    padding: 20px;
 }
+.text-card{
+    text-align: center;
+}
+
 /* playbar */
 .play-bar{
     width: 100%;
-    height: 100px;
+    height: 50px;
     background-color: blue;
     position: fixed;
     z-index: 1000;
