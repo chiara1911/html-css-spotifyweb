@@ -44,6 +44,7 @@ body{
 li{
   list-style-type: none;
   padding: 5px;
+  font-size: 0.8em;
 }
 
 h4{
@@ -56,6 +57,9 @@ p{
     font-size: 0.6em;
 }
 
+.uppercase{
+    text-transform: uppercase;
+}
 img{
     width: 100%;
     object-fit: contain;
@@ -66,6 +70,12 @@ hr{
 }
 .circle{
     border-radius: 50%;
+}
+
+i{
+    color: var(--color-light-grey);
+    margin-right: 10px;
+   
 }
 /* main */
 main{
@@ -87,28 +97,36 @@ main{
     padding: 20px;
 }
 
-
+.img-list{
+    width: 10%;
+    margin-right: 8px;
+    
+}
 #top-bar{
-
-    height: 100px;
+    height: calc(100% - 80px) ;  
+    align-items: flex-start;  
 }
 
-
-.home{
+#bottom-bar{
+    height: 80px;  
+}
+.top-list{
     width: 100%;
-    height: 200px;
+    height: 80px;
 }
 
+#logo-spotify :hover{
+    color: var(--color-highlight);
+}
+
+#second-section{
+    margin-top: 30px;
+}
 /* choose content */
 
-li:hover{
-    text-decoration: underline  var(--color-highlight);
-    text-underline-offset: 7px;
- 
-}
+
 /* main-content */
 .main-content{
-    /* background-color: red; */
     width: calc(100% - 250px);
     
     padding-top: 90px;
@@ -137,7 +155,7 @@ li:hover{
 }
 
 .choose{
-    margin: 5px 200px;
+    margin: 5px 300px;
 }
 
 .card{
@@ -154,7 +172,8 @@ li:hover{
 
 .card-img{
     height: 150px;
-    width: 150px;  
+    width: 150px;
+    position: relative;  
 
 }
 
@@ -176,8 +195,18 @@ li:hover{
     z-index: 2000;
     bottom: 0;
     left: 0;
+    padding: 5px;
 }
 
+#img-icon{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+#icon{
+    margin-left: 30px;
+}
 /* MEDIA QUERY */
 
 @media screen and (max-width: 1200px){

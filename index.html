@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans&family=Noto+Sans+Linear+B&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans&family=Noto+Sans+Linear+B&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify-web</title>
 </head>
@@ -16,32 +21,35 @@
         <main class="d-flex">
             <nav class="side-bar d-flex justify-between">
                 <div id="top-bar" class="column-between">
-                    <img src="img/logo.svg" alt="logo-spotify">                    
-                        <ul>
-                            <li>1</li>
-                            <li>1</li>
-                            <li>1</li>
-                        </ul>
+
+                    <img src="img/logo.svg" alt="logo-spotify" id="logo-spotify">
+                    <ul class="top-list">
+                        <li><img src="img/home.svg" alt="" class="img-list"> home</li>
+                        <li><img src="img/search.svg" alt="" class="img-list">Cerca</li>
+                        <li><img src="img/libreria.svg" alt="" class="img-list"> La mia libreria</li>
+                    </ul>
+                    <div id="second-section">
                         <h2>Playlist</h2>
                         <ul>
-                            <li>1</li>
-                            <li>1</li>
-                            <li>1</li>
-                            <li>1</li>
-                            <li>1</li>
-                            <li>1</li>
-                            <li>1</li>
-                            <li>1</li>
+                            <li></li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
                         </ul>
-                    
+                    </div>
+
                 </div>
-                <div id="bottom-bar"  class="column-between">
-                   <p>installa app</p>
-                   <hr>
-                   <h3>John Doe</h3>
-                    
+                <div id="bottom-bar">
+                    <p>installa app</p>
+                    <hr>
+                    <h3>John Doe</h3>
+
                 </div>
-             
+
 
             </nav>
             <div id="fixed-button">
@@ -50,12 +58,12 @@
             <section class="main-content">
                 <nav class="choose">
                     <ul class="d-flex justify-between">
-                        <li>in evidenza</li>
-                        <li>podcast</li>
-                        <li>classifiche</li>
-                        <li>generi e mood</li>
-                        <li>nuove uscite</li>
-                        <li>scopri</li>
+                        <li class="uppercase">in evidenza</li>
+                        <li class="uppercase">podcast</li>
+                        <li class="uppercase">classifiche</li>
+                        <li class="uppercase">generi e mood</li>
+                        <li class="uppercase">nuove uscite</li>
+                        <li class="uppercase">scopri</li>
                     </ul>
                 </nav>
                 <div class="card-section">
@@ -136,7 +144,7 @@
                                 <img src="img/mixdaily.jpeg" alt="">
                                 <div class="text-card">
                                     <h4>Daily Mix 1</h4>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -151,7 +159,7 @@
                                 <img src="img/youg.jpeg" alt="" class="circle">
                                 <div class="text-card">
                                     <h4>Lana Del Rey</h4>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -162,7 +170,7 @@
                                 <img src="img/einaudi.jpeg" alt="" class="circle">
                                 <div class="text-card">
                                     <h4>Ludovico Einaudi</h4>
-                                 
+
                                 </div>
                             </div>
                         </div>
@@ -170,7 +178,30 @@
                 </div>
             </section>
         </main>
-        <div class="play-bar"></div>
+        <section class="play-bar">
+            <div class="d-flex">
+                <img src="img/sinister.jpeg" alt="sinister" id="img-icon">
+                <div class="d-flex f-column">
+                    <h4>Sinister</h4>
+                    <p>Brano nome</p>
+                </div>
+                <div id="icon">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+
+            </div>
+            <div class="d-flex">
+                <ul>
+                    <li><i class="fa-solid fa-shuffle"></i></li>
+                    <li><i class="fa-solid fa-backward-step"></i></li>
+                    <li></li>
+                </ul>
+
+
+            </div>
+
+        </section>
     </div>
 
 </body>
