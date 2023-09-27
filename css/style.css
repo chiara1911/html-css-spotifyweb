@@ -20,7 +20,9 @@
 .d-flex{
     display: flex;
 }
-
+body{
+    font-family: 'Montserrat', sans-serif;
+}
 .wrap{
     flex-wrap: wrap;
 }
@@ -71,6 +73,7 @@ main{
     height: calc(100vh - 50px);  
     background-color: var(--color-dark-color);
     color: var(--color-white);
+    margin: 0 auto;
     
 }
 /* sidebar */
@@ -99,7 +102,7 @@ main{
 /* choose content */
 
 li:hover{
-    text-decoration: underline var(--color-highlight);
+    text-decoration: underline  var(--color-highlight);
     text-underline-offset: 7px;
  
 }
@@ -170,13 +173,34 @@ li:hover{
     height: 50px;
     background-color: var(--color-dark-grey);
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
     bottom: 0;
     left: 0;
 }
 
 /* MEDIA QUERY */
 
-@media screen and {max-width: ;
+@media screen and (max-width: 1200px){
+    .wrap{
+        flex-wrap: wrap;
+    }
+    .card{
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width: 992px){
+    .card{
+        width: calc(100% / 3)
+    }
+    
+}
+@media screen and (max-width: 768px){
+    .card{
+        width: calc(100% / 2);
+    }
+    
+}
+@media screen and (max-width: 576px){
     
 }
