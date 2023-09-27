@@ -19,9 +19,8 @@
 <body>
     <div class="wrapper">
         <main class="d-flex">
-            <nav class="side-bar d-flex justify-between">
+            <nav class="side-bar ">
                 <div id="top-bar" class="column-between">
-
                     <img src="img/logo.svg" alt="logo-spotify" id="logo-spotify">
                     <ul class="top-list">
                         <li><img src="img/home.svg" alt="" class="img-list"> home</li>
@@ -44,9 +43,10 @@
 
                 </div>
                 <div id="bottom-bar">
-                    <p>installa app</p>
+                    <span><i class="fa-solid fa-circle-arrow-down"></i>installa app</span>
+                   
                     <hr>
-                    <h3>John Doe</h3>
+                    <h3 id="john"><i class="fa-regular fa-circle-user"></i>John Doe</h3>
 
                 </div>
 
@@ -178,8 +178,8 @@
                 </div>
             </section>
         </main>
-        <section class="play-bar d-flex ">
-            <div class="d-flex">
+        <section class="play-bar d-flex justify-between">
+            <div class="play-bar-left d-flex">
                 <img src="img/sinister.jpeg" alt="sinister" id="img-icon">
                 <div class="d-flex f-column">
                     <h4>Sinister</h4>
@@ -192,18 +192,21 @@
 
             </div>
             <div class="play-bar-middle ">
-                <div class="d-flex justify-between">
+                <div class="d-flex justify-center play-bar-mid">
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-step"></i>
                     <i class="fa-solid fa-play"></i>
                     <i class="fa-solid fa-forward-step"></i>
-                </div>
-                <div class="scrollbar">
+              
+                <div class="justify-center">
 
-
-                </div>
+                
+                    <input type="range" id="vol" name="vol" min="0" max="50">  
+                </div>  
+                </div>             
+               
             </div>
-            <div class="d-flex align-between">
+            <div class="d-flex play-bar-right">
                 <i class="fa-solid fa-bars"></i>
                 <i class="fa-solid fa-desktop"></i>
                 <i class="fa-solid fa-volume-high"></i>
