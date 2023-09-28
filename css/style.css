@@ -97,9 +97,10 @@ i {
 
 }
 
-.p-10{
+.p-10 {
     padding: 10px;
 }
+
 /* main */
 main {
     width: 100%;
@@ -132,6 +133,7 @@ main {
 #top-bar {
     height: calc(100% - 80px);
     align-items: flex-start;
+    overflow: hidden;
 }
 
 #john {
@@ -148,8 +150,9 @@ main {
     height: 80px;
 }
 
-#logo-spotify :hover {
-    color: var(--color-highlight);
+a{
+    text-decoration: none;
+    color: var(--color-white);
 }
 
 #logo-small {
@@ -170,7 +173,7 @@ main {
     font-size: 20px;
 }
 
-#plus{
+#plus {
     padding: 5px;
     color: black;
     width: 30px;
@@ -182,19 +185,24 @@ main {
 
 #top-bar li:hover {
     border-left: solid 1px var(--color-highlight);
-    padding-right: 50px
+
 }
+
 /* choose content */
-.choose{
+.choose {
     padding: 10px 50px;
 }
+
 .uppercase {
     text-transform: uppercase;
+    color: var(--color-grey);
 }
-.uppercase:hover{
+
+.uppercase:hover {
     border-bottom: solid 2px var(--color-highlight);
 
 }
+
 
 /* main-content */
 
@@ -253,26 +261,25 @@ li .choose {
 
 }
 
-.overlay{
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-   font-size: 2em;
-   opacity: 0;
-   transition: opacity 0.5s;
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.card:hover .overlay{  
- opacity: 1;
-  
-    
+.card:hover .overlay {
+    opacity: 1;
 }
+
 .card-section {
     margin: 20px;
     padding: 20px;
@@ -303,7 +310,9 @@ li .choose {
 #icon {
     margin-left: 30px;
 }
-
+#icon i:hover{
+    color: red;
+}
 .play-bar-left {
     width: 400px;
     padding: 10px;
@@ -316,14 +325,20 @@ li .choose {
     font-size: 2rem;
 }
 
+.play-bar-middle i:hover {
+    color: var(--color-highlight);
+}
 .play-bar-right {
     width: 400px;
     font-size: 2rem;
-  
+}
+
+.play-bar-right i:hover {
+    color: var(--color-highlight);
 }
 
 
-.slide-bar{
+.slide-bar {
     accent-color: var(--color-grey);
     width: 300px;
 
@@ -333,13 +348,51 @@ li .choose {
 
 /* MEDIA QUERY */
 
+@media screen and (max-width: 1200px) {
+    .wrap {
+        flex-wrap: wrap;
+    }
 
+    .card {
+        width: calc((100% / 4) - 20px);
+        margin: 5px;
+       
+    }
 
+    .slide-bar {
+        accent-color: var(--color-grey);
 
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .card {
+        width: calc(100% / 3);
+    }
+ .play-bar  i {
+   font-size: 1rem;
+   }
+   .slide-bar{
+   display: none;
+
+   }
+}
 
 @media screen and (max-width: 768px) {
+    main{
+        height: 100%;
+        margin: 0 auto;
+    }
     .card {
         width: calc(100% / 2);
+    }
+
+    .top-list li {
+        display: none;
+    }
+
+    #second-section {
+        display: none;
     }
 
     #logo-spotify {
@@ -354,27 +407,6 @@ li .choose {
     .side-bar {
         width: 100px;
     }
+    
 
 }
-@media screen and (max-width: 992px) {
-    .card {
-        width: calc(100% / 3)
-    }
-
-}
-@media screen and (max-width: 1200px) {
-    .wrap {
-        flex-wrap: wrap;
-    }
-
-    .card {
-        width: calc(100% / 4);
-    }
-
-.slide-bar {
-    accent-color: var(--color-grey);
-
-}
-}
-
-
