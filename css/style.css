@@ -150,7 +150,7 @@ main {
     height: 80px;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--color-white);
 }
@@ -243,9 +243,8 @@ li .choose {
 
 .card {
     width: calc(100% / 6);
-    height: 200px;
+    padding: 10px;
     background-color: var(--color-dark-color);
-    margin-top: 20px;
     cursor: pointer;
 
 }
@@ -255,8 +254,6 @@ li .choose {
 }
 
 .card-img {
-    height: 180px;
-    width: 180px;
     position: relative;
 
 }
@@ -276,7 +273,7 @@ li .choose {
     transition: opacity 0.5s;
 }
 
-.card:hover .overlay {
+.card-img:hover .overlay {
     opacity: 1;
 }
 
@@ -310,9 +307,11 @@ li .choose {
 #icon {
     margin-left: 30px;
 }
-#icon i:hover{
+
+#icon i:hover {
     color: red;
 }
+
 .play-bar-left {
     width: 400px;
     padding: 10px;
@@ -328,6 +327,7 @@ li .choose {
 .play-bar-middle i:hover {
     color: var(--color-highlight);
 }
+
 .play-bar-right {
     width: 400px;
     font-size: 2rem;
@@ -354,9 +354,7 @@ li .choose {
     }
 
     .card {
-        width: calc((100% / 4) - 20px);
-        margin: 5px;
-       
+        width: calc(100% / 4);
     }
 
     .slide-bar {
@@ -369,23 +367,32 @@ li .choose {
     .card {
         width: calc(100% / 3);
     }
- .play-bar  i {
-   font-size: 1rem;
-   }
-   .slide-bar{
-   display: none;
 
-   }
+    .play-bar i {
+        font-size: 1rem;
+    }
+
+    .slide-bar {
+        display: none;
+
+    }
 }
 
 @media screen and (max-width: 768px) {
-    main{
-        height: 100%;
-        margin: 0 auto;
-    }
     .card {
         width: calc(100% / 2);
     }
+
+}
+@media screen and (max-width: 576px){
+    
+.side-bar{
+    width: 100px;
+    padding-bottom: 30px;
+}
+.main-content{
+    width: calc(100% - 100px);
+}
 
     .top-list li {
         display: none;
@@ -403,10 +410,5 @@ li .choose {
         display: block;
         width: 50px;
     }
-
-    .side-bar {
-        width: 100px;
-    }
-    
 
 }
