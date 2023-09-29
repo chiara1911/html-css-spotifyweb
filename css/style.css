@@ -358,25 +358,45 @@ li .choose {
     background-image: linear-gradient(to right, rgba(12, 17, 20, 1) 0%, 25%, rgba(140, 155, 150, 1) 50%, 75%, rgba(2, 10, 33, 1) 100%);
 }
 
-.top-page {
-    height: 50%;
-   
 
+
+.title{
+    width: calc((100% / 3) * 2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
 }
 
-.bottom-page {
-    height: 50%;
-
+.title h1{
+    font-size: 3rem;
 }
 
 .img-top {
-    width: 300px;
-    padding: 40px;
-    margin-left: 30px;
+    width: calc(100% / 3);
+    padding: 30px;
+   
 }
-
+.info-album li{
+    list-style:disc; 
+}
 .color-b {
     color: var(--color-black);
+}
+#kyle{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+   margin-bottom: 20px;
+}
+
+audio{
+    visibility: hidden;
+}
+audio::-webkit-media-controls-play-button{
+    visibility: visible;
+    filter: invert(1);
 }
 
 /* MEDIA QUERY */
